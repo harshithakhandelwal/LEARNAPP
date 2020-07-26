@@ -1,0 +1,77 @@
+<head>
+<style>
+input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+ width:95%;
+ padding:10px;
+ border:1px solid #ddd;
+ margin-bottom:10px;
+ cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+ color:#fff;
+ border:1px solid #0C0 !important;
+ -webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+#myButton {
+
+visibility:hidden;
+align:center;
+}
+</style>
+</head>
+<body>
+<div class="scp-quizzes-main">
+<div class="scp-quizzes-data">
+  <h3>1. What is the main motto to take care of in this covid</h3>
+    
+}</pre>
+<br/>
+    <input type="radio" id="Fastlearning" name="question1" onclick="myF()">
+       <label for="Fastlearning">1. SOCIAL DISTANCING</label><br/>
+    <input type="radio"  name="question1">
+       <label>2. WASHING HANDS</label><br/>
+    <input type="radio" name="question1">
+       <label>3. AVOIDING SOCIAL DISTANCING </label> <br/>
+    <input type="radio" name="question1">
+     <label>4. EATING HEALTHY</label> 
+ </div>
+ <form action ="certificate4.html" method="post">
+<button class="button" type = "submit" id="myButton" >CERTIFICATE</button>
+</form>
+
+ </body>
+ 
+
+ <script src="http://www.fastlearning.in/controller/js/jquery-1.9.1.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+		
+    });
+});
+
+function myF() {
+ 
+  document.getElementById("myButton").style.visibility = "visible";
+}
+</script>
+
+ 
